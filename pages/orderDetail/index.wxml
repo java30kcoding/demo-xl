@@ -1,0 +1,44 @@
+<van-cell
+        is-link
+        title="您的订单已由本人签收。如有疑问可以联系配送员【XXX，136XXXXXXXX】确认。感谢您的使用，欢迎再次光临"
+        label="2020-05-05 16:33:14"
+        link-type="navigateTo"
+        url="/pages/express/index"
+        icon="logistics"
+/>
+<van-cell title="XXX 13352XXXXXX" icon="location-o" size="large"
+          label="地址：厦门市XX区XX街道XXX酒店"/>
+<van-cell value="79￥" use-label-slot="{{ true }}">
+    <view slot="title">
+        <view class="van-cell-text">XX机场 - XX酒店</view>
+    </view>
+    <view slot="label">
+        <van-grid column-num="3" border="{{ false }}">
+            <van-grid-item use-slot wx:for="{{ 3 }}" wx:for-item="index">
+                <image
+                    style="width: 100%; height: 100rpx;"
+                    src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"
+                />
+            </van-grid-item>
+        </van-grid>
+    </view>
+</van-cell>
+<van-cell-group title="订单信息">
+    <van-cell title="订单编号" border="{{ false }}" value="6516216548964321659" />
+    <van-cell title="微信交易号" border="{{ false }}"  value="65132194984321654687489632145" />
+    <van-cell title="创建时间" border="{{ false }}"  value="2020-05-04 10:59:33" />
+    <van-cell title="发货时间" border="{{ false }}"  value="2020-05-05 12:13:54" />
+</van-cell-group>
+<text>\n</text>
+<text>\n</text>
+<van-row>
+    <van-col offset="9" span="6">
+        <van-button type="default" round size="normal" style="position: fixed;bottom: 15rpx;"
+                    custom-style="width:200rpx;height:60rpx" bindtap="goWuLiu">查看物流</van-button>
+    </van-col>
+    <van-col offset="17" span="6">
+        <van-button type="default" round size="normal" style="position: fixed;bottom: 15rpx;" custom-style="width:200rpx;height:60rpx">确认收货</van-button>
+    </van-col>
+</van-row>
+
+

@@ -1,0 +1,41 @@
+<!--<view class="container">-->
+<!--  <view class="userinfo">-->
+<!--    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>-->
+<!--    <block wx:else>-->
+<!--      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>-->
+<!--      <text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
+<!--    </block>-->
+<!--  </view>-->
+<!--  <view class="usermotto">-->
+<!--    <text class="user-motto">{{motto}}</text>-->
+<!--  </view>-->
+<!--</view>-->
+<view class="index_swiper">
+  <swiper autoplay="{{true}}" indicator-dots="{{true}}">
+    <swiper-item wx:for="{{swiperList}}" >
+      <navigator>
+        <image mode="widthFix" src="{{item.image_src}}" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!--<van-button type="primary" block>行李配送</van-button>-->
+<!--<van-button type="primary" block>租借中心</van-button>-->
+<!--<van-button type="primary" block>评论专区</van-button>-->
+<van-button icon="https://img.yzcdn.cn/vant/logo.png" type="info" block bindtap="goXingLi">行李配送</van-button>
+<van-button icon="https://img.yzcdn.cn/vant/logo.png" type="info" block bindtap="goZuJie">租借中心</van-button>
+<van-button icon="https://img.yzcdn.cn/vant/logo.png" type="info" block>评论专区</van-button>
+
+<!--<a class="weui-btn_cell weui-btn_cell-primary" bindtap="goXingLi">-->
+<!--  <image class="weui-btn_cell__icon" src="https://api-hmugo-web.itheima.net/pyg/icon_index_nav_4@2x.png"></image>-->
+<!--  行李配送-->
+<!--</a>-->
+<!--<a class="weui-btn_cell weui-btn_cell-primary">-->
+<!--  <image class="weui-btn_cell__icon" src="https://api-hmugo-web.itheima.net/pyg/icon_index_nav_4@2x.png"></image>-->
+<!--  租借中心-->
+<!--</a>-->
+<!--<a class="weui-btn_cell weui-btn_cell-primary">-->
+<!--  <image class="weui-btn_cell__icon" src="https://api-hmugo-web.itheima.net/pyg/icon_index_nav_4@2x.png"></image>-->
+<!--  评论专区-->
+<!--</a>-->
+

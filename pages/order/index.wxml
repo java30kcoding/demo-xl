@@ -1,0 +1,231 @@
+<!--<view class="weui-form__control-area">-->
+<!--    <view class="weui-cells__group weui-cells__group_form">-->
+<!--        <view class="weui-cells__title">寄出行李</view>-->
+<!--        <view class="weui-cells weui-cells_form">-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd"><label class="weui-label">寄送地点</label></view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">-->
+<!--                        <view class="picker">-->
+<!--                            {{array[index]}}-->
+<!--                        </view>-->
+<!--                    </picker>-->
+<!--                </view>-->
+<!--            </view>-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd">-->
+<!--                    <label class="weui-label">寄送时间</label>-->
+<!--                </view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">-->
+<!--                        <view class="picker">-->
+<!--                            选择时间：{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}:{{multiArray[2][multiIndex[2]]}}-->
+<!--                        </view>-->
+<!--                    </picker>-->
+<!--                </view>-->
+<!--            </view>-->
+<!--        </view>-->
+<!--    </view>-->
+<!--</view>-->
+<!--<view class="weui-form__control-area">-->
+<!--    <view class="weui-cells__group weui-cells__group_form">-->
+<!--        <view class="weui-cells__title">领回行李</view>-->
+<!--        <view class="weui-cells weui-cells_form">-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd">-->
+<!--                    <label class="weui-label">领回地点</label>-->
+<!--                </view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <input class="weui-input" placeholder="填写领回详细地址" placeholder-class="weui-input__placeholder" />-->
+<!--                </view>-->
+<!--            </view>-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd">-->
+<!--                    <label class="weui-label">领回时间</label>-->
+<!--                </view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <picker mode="multiSelector" bindchange="bindMultiPickerChange1" value="{{multiIndex1}}" range="{{multiArray1}}">-->
+<!--                        <view class="picker1">-->
+<!--                            选择时间：{{multiArray1[0][multiIndex1[0]]}} {{multiArray1[1][multiIndex1[1]]}}:{{multiArray1[2][multiIndex1[2]]}}-->
+<!--                        </view>-->
+<!--                    </picker>-->
+<!--                </view>-->
+<!--            </view>-->
+<!--        </view>-->
+<!--    </view>-->
+<!--</view>-->
+<!--<view class="weui-form__control-area">-->
+<!--    <view class="weui-cells__group weui-cells__group_form">-->
+<!--        <view class="weui-cells__title">我的信息</view>-->
+<!--        <view class="weui-cells weui-cells_form">-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd">-->
+<!--                    <label class="weui-label">姓名</label>-->
+<!--                </view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <input class="weui-input" placeholder="请填写您的真实姓名" placeholder-class="weui-input__placeholder" />-->
+<!--                </view>-->
+<!--            </view>-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd">-->
+<!--                    <label class="weui-label">手机号</label>-->
+<!--                </view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <input class="weui-input" type="number" placeholder="请填写您的真实手机号码" placeholder-class="weui-input__placeholder" />-->
+<!--                </view>-->
+<!--            </view>-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd">-->
+<!--                    <label class="weui-label">证件号</label>-->
+<!--                </view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <input class="weui-input" type="idcard" placeholder="请填写您的真实证件号码" placeholder-class="weui-input__placeholder" />-->
+<!--                </view>-->
+<!--            </view>-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd">-->
+<!--                    <label class="weui-label">备注</label>-->
+<!--                </view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <input class="weui-input" placeholder="其他联系方式、特别需求等" placeholder-class="weui-input__placeholder" />-->
+<!--                </view>-->
+<!--            </view>-->
+<!--        </view>-->
+<!--    </view>-->
+<!--</view>-->
+<!--<view class="weui-form__control-area">-->
+<!--    <view class="weui-cells__group weui-cells__group_form">-->
+<!--        <view class="weui-cells__title">行李信息</view>-->
+<!--        <view class="weui-cells weui-cells_form">-->
+<!--            <view class="weui-cell weui-cell_active">-->
+<!--                <view class="weui-cell__hd">-->
+<!--                    <label class="weui-label">行李件数</label>-->
+<!--                </view>-->
+<!--                <view class="weui-cell__bd">-->
+<!--                    <input class="weui-input" type="number" placeholder="填写行李件数" placeholder-class="weui-input__placeholder" />-->
+<!--                </view>-->
+<!--            </view>-->
+<!--            <view class="weui-uploader">-->
+<!--                <view class="img-v weui-uploader__bd">-->
+<!--                    行李照片或寄存凭证(最多三张)-->
+<!--                    <view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">-->
+<!--                        <image class='weui-uploader__img '-->
+<!--                               src="{{item}}"-->
+<!--                               data-index="{{index}}" mode="aspectFill" bindtap="previewImg">-->
+<!--                            <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>-->
+<!--                        </image>-->
+<!--                    </view>-->
+<!--                    &lt;!&ndash; 用来提示用户上传图片 &ndash;&gt;-->
+<!--                    <view class="upload_icon" bindtap="chooseImg">-->
+<!--                        <image mode="widthFix" src="/icons/upload.png"></image>-->
+<!--                    </view>-->
+<!--                </view>-->
+<!--            </view>-->
+<!--        </view>-->
+<!--    </view>-->
+<!--</view>-->
+
+<van-cell-group title="寄出行李">
+    <van-field
+            value="{{ sendAddress }}"
+            required
+            clearable
+            label="寄送地点"
+            icon="question-o"
+            placeholder="请填写详细的寄送地址"
+            bind:click-icon="onClickIcon"
+    />
+    <van-field value="{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}}"
+               required
+               clearable
+               label="寄送时间"
+               readonly
+               use-button-slot>
+        <van-button slot="button" size="small" type="primary">
+            <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+                <view class="picker">
+                    选择时间
+                </view>
+            </picker>
+        </van-button>
+    </van-field>
+</van-cell-group>
+<van-cell-group title="领回行李">
+    <van-field
+            value="{{ backAddress }}"
+            required
+            clearable
+            label="领回地点"
+            icon="question-o"
+            placeholder="请填写详细的领回地址"
+            bind:click-icon="onClickIcon"
+    />
+    <van-field value="{{multiArray1[0][multiIndex1[0]]}} {{multiArray1[1][multiIndex1[1]]}} {{multiArray1[2][multiIndex1[2]]}}"
+           required
+           clearable
+           label="领回时间"
+           readonly
+           use-button-slot>
+        <van-button slot="button" size="small" type="primary">
+            <picker mode="multiSelector" bindchange="bindMultiPickerChange1" value="{{multiIndex1}}" range="{{multiArray1}}">
+                <view class="picker">
+                    选择时间
+                </view>
+            </picker>
+        </van-button>
+    </van-field>
+</van-cell-group>
+<van-cell-group title="我的信息">
+    <van-field
+        value="{{ username }}"
+        required
+        clearable
+        label="姓名"
+        icon="question-o"
+        placeholder="请填写您的真实姓名"
+    />
+    <van-field
+        value="{{ userMobile }}"
+        required
+        clearable
+        label="手机号"
+        type="number"
+        placeholder="请填写您的真实手机号码"
+    />
+    <van-field
+        value="{{ userCart }}"
+        required
+        clearable
+        label="证件号"
+        type="idcard"
+        placeholder="请填写您的真实证件号码"
+    />
+    <van-field
+        value="{{ userOthers }}"
+        required
+        clearable
+        label="备注"
+        placeholder="其他联系方式、特别需求等"
+    />
+</van-cell-group>
+<van-cell-group title="行李信息">
+    <van-cell title="行李件数">
+        <view slot="extra">
+            <van-stepper value="{{ 1 }}" bind:change="onChange" />
+        </view>
+    </van-cell>
+    <van-cell title="行李照片" label="最多三张">
+        <view slot="extra">
+            <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" preview-size="80rpx"
+                          preview-image preview-full-image accept="image" max-count="3"/>
+        </view>
+    </van-cell>
+</van-cell-group>
+<text>\n</text>
+<text>\n</text>
+<van-submit-bar
+        price="{{ 3050 }}"
+        button-text="提交订单"
+        bind:submit="onSubmit"
+/>
+

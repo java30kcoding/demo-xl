@@ -1,0 +1,6 @@
+<!--pages/express/index.wxml-->
+<van-steps
+        steps="{{ steps }}"
+        active="{{ active }}"
+        direction="vertical"
+/>
