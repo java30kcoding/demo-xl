@@ -1,2 +1,70 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!--
+<button size="mini" class="b1" disabled="true">LPick</button>
+<button size="mini" class="b2" type="primary" >Share</button>
+-->
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+
+	<block wx:if="{{tabs[0].isActive}}">
+		<view>
+        <!--
+        https://s1.ax1x.com/2020/05/04/Y9WmLR.png
+        https://s1.ax1x.com/2020/05/04/Y9WKdx.png
+        -->
+			  <!--
+        <radio-group bindchange="handleChange">
+        <radio value="1">
+        <image class="img1" src="https://s1.ax1x.com/2020/05/04/Y9WKdx.png"></image>
+        </radio2
+        </radio3group>
+      -->
+
+			<image class="top1" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPrT9H.jpg"></image>
+			<image class="top2" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPrvE8.jpg"></image>
+			<image class="top3" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPs93j.jpg"></image>
+      <image class="t top4 to0" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPspCQ.jpg"></image>
+      <image class="t top4 to1" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPspCQ.jpg"></image>
+      <image class="t top4 to2" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPspCQ.jpg"></image>
+
+      <image class="t top5 to0" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPspCQ.jpg"></image>
+      <image class="t top5 to1" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPspCQ.jpg"></image>
+      <image class="t top5 to2" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YPspCQ.jpg"></image>
+
+
+      <image class="img1" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YiceYT.png"></image>
+      <image class="img2" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YiceYT.png"></image>
+      <image class="img3" mode="aspectFill" src="https://s1.ax1x.com/2020/05/05/YiceYT.png"></image>
+
+    	<!--
+          top3   https://s1.ax1x.com/2020/05/04/YpTQsg.png
+          t top4   https://imgchr.com/i/YpTGon
+          t top5   https://imgchr.com/i/YpTtJ0
+      -->
+		</view>
+	</block>
+
+  <block wx:elif="{{tabs[1].isActive}}">
+    <search></search> 
+    <view class="wh"></view>
+    <view class="divLine"></view>
+    <navigator class="whi" url="/pages/forum/forum" open-type="navigate"><text class="txt">[置顶]公告</text></navigator>
+    <view class="divLine"></view>
+    <navigator class="whi" url="/pages/forum/forum" open-type="navigate"><text class="txt">当地导游带你一起深度体验厦门</text></navigator>
+    <view class="divLine"></view>
+    <navigator class="whi" url="/pages/forum/forum" open-type="navigate"><text class="txt">小巷里的美食汇总</text></navigator>
+    <view class="divLine"></view>
+    <navigator class="whi" url="/pages/forum/forum" open-type="navigate"><text class="txt">【坑】看看有哪些雷你也踩过</text></navigator>
+    <view class="divLine"></view>
+    <navigator class="whi" url="/pages/forum/forum" open-type="navigate"></navigator>
+    <view class="divLine"></view>
+    <navigator class="whi" url="/pages/forum/forum" open-type="navigate"></navigator>
+    <view class="divLine"></view>
+    <navigator class="whi" url="/pages/forum/forum" open-type="navigate"></navigator>
+    <view class="divLine">
+    </view><navigator class="whi" url="/pages/forum/forum" open-type="navigate"></navigator>
+    <view class="divLine"></view>
+    <navigator class="whi" url="/pages/forum/forum" open-type="navigate"></navigator>
+    <view class="divLine"></view>
+  </block>
+
+
+</Tabs>

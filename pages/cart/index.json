@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
-}
+  "usingComponents": {
+    "Tabs":"../../components/Tabs/Tabs",
+    "search": "/components/search/search"
+  },
+  "enablePullDownRefresh":true,
+  "navigationBarTitleText": "L Pick",
+  "navigationBarBackgroundColor":"#ff6633",
+  "navigationBarTextStyle":"white",
+  "backgroundColor":"#ff9933"
+} 

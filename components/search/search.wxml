@@ -1,0 +1,5 @@
+<view class="search">
+  <navigator url="/pages/searchp/searchp" open-type="navigate">
+  搜索关键词
+  </navigator>
+</view>

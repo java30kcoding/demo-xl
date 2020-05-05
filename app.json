@@ -8,7 +8,9 @@
     "pages/order/index",
     "pages/search/index",
     "pages/orderDetail/index",
-    "pages/express/index"
+    "pages/express/index",
+    "pages/searchp/searchp",
+    "pages/forum/forum"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -32,9 +34,9 @@
       "text": "分类"
     }, {
       "pagePath": "pages/cart/index",
-      "iconPath": "icons/cart_20190818_110336.png",
-      "selectedIconPath": "icons/cart-o.png",
-      "text": "购物车"
+      "iconPath": "icons/_AK-TR.png",
+      "selectedIconPath": "icons/AK-TR.png",
+      "text": "泡泡圈"
     }, {
       "pagePath": "pages/user/index",
       "iconPath": "icons/my.png",
